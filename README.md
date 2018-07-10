@@ -231,16 +231,16 @@ $ python manager.py db migrate
 $ ./docker-build.sh
 ```
 # celery异步处理
-* 见项目test目录test_celery.py
+* 见项目`test`目录`test_celery.py`
 
 # swagger配置
-* 见项目examples目录swagger_for_api.py
+* 见项目`examples`目录`swagger_for_api.py`
 
 # 更多信息见项目源码，希望对你有所帮助
 
 ## Authors
-* [tomoncle](https://gitlab.com/tomoncle)
-* 源码地址：https://gitlab.com/tomoncle/flaskapp
+* [tomoncle](https://github.com/tomoncle)
+* 源码地址：https://github.com/tomoncle/flaskapp
 
 
   [1]: https://img.mukewang.com/5b44c9d800017d6710510320.png
