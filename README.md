@@ -1,5 +1,7 @@
 # Flask Application
 
+[![Build Status](https://api.travis-ci.org/tomoncle/flaskapp.svg?branch=master)][travis]
+
 * 拓展flask支持banner， 支持config.properties配置文件导入
 * 模块化设计，支持数据库迁移
 * 封装sqlalchemy数据库操作
@@ -246,3 +248,4 @@ $ ./docker-build.sh
   [3]: https://img.mukewang.com/5b44ca6700010b0208470229.png
   [4]: https://img.mukewang.com/5b44cabb0001cf0909330121.png
   [5]: https://img.mukewang.com/5b44cb570001d28307850472.png
+  [travis]: https://travis-ci.org/tomoncle/flaskapp
