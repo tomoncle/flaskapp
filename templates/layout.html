@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+    {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+        <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon"/>
+        <title>
+            {% block title %}{% endblock %} - Flask TODO
+        </title>
+    {% endblock %}
+</head>
+<body style="width: 100%">
+<div id="content">{% block content %}{% endblock %}</div>
+<div id="footer" style="position: absolute;bottom: 0px;padding-bottom:10px;text-align: center;width: 100%">
+    {% block footer %}
+        &copy; Copyright 2018 by <a href="https://github.com/tomoncle/">tomoncle</a>.
+    {% endblock %}
+</div>
+</body>

@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <script src="/static/js/app.js"></script>
+{% endblock %}
+{% block content %}
+    消息提示：<p style="color: red">{{ get_flashed_messages()[0] }}</p>
+    <br/>
+    welcome flask index.html
+
+    <br>
+    {% if users %}
+        <h1>users:</h1>
+        {% for user in users %}
+            {{ user }} &nbsp;
+        {% endfor %}
+    {% endif %}
+    <br/>
+    {% if user %}
+        <h1>user:</h1>{{ user }}
+    {% endif %}
+
+    <br/>
+    <h1>登录</h1>
+    <div style="background-image: inherit;">
+        <img src="/static/images/0.jpg">
+        <form action="/login" method="post" style="background: inherit">
+            username:<input type="text" name="username" placeholder="username"/><br>
+            password:<input type="password" name="password" placeholder="password"/><br>
+            <button type="submit" value="提交">提交</button>
+        </form>
+    </div>
+    <script>
+        // 测试静态资源
+        app.alert("当前时间：" + app.time())
+    </script>
+{% endblock %}

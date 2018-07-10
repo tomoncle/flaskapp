@@ -1,0 +1,6 @@
+/.idea
+*.pyc
+*.xml
+*.*~
+migrations
+*.db

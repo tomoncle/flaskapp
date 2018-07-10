@@ -1,0 +1,21 @@
+{#extends 标签必须是模板中的第一个标签#}
+{% extends "layout.html" %}
+{#修改标题#}
+{% block title %}Flask-Form{% endblock %}
+{% block head %}
+    {# 使用 {{ super() }}显示父模板中定义的对应块的内容   #}
+    {{ super() }}
+{% endblock %}
+{#修改内容#}
+{% block content %}
+    {% if message %}
+        <h1>{{ message }}</h1>
+    {% endif %}
+    <br/>
+    <form action="/login" method="post">
+        username:{{ form.username }}<br/>
+        password:{{ form.password }}<br/>
+        <input type="submit" value="Submit"/>
+        <input type="reset" value="Reset"/>
+    </form>
+{% endblock %}

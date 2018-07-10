@@ -1,0 +1,17 @@
+{#extends 标签必须是模板中的第一个标签#}
+{% extends "layout.html" %}
+{#修改标题#}
+{% block title %}SOS{% endblock %}
+{% block head %}
+    {# 使用 {{ super() }}显示父模板中定义的对应块的内容   #}
+    {{ super() }}
+{% endblock %}
+{#修改内容#}
+{% block content %}
+    <div style="text-align: center">
+        <h1 style="margin-top: 10px">wow 你要找的页面去火星了</h1>
+        {% if err %}
+            <h2 style="color: red;margin-top: 10%">详情：{{ err }}</h2>
+        {% endif %}
+    </div>
+{% endblock %}

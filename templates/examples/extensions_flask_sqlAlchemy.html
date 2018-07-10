@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h2>All Items</h2>
+     消息提示：<p style="color: red">{{ get_flashed_messages()[0] }}</p>
+    <br/>
+    <form action="{{ url_for('update') }}" method=post>
+        <table border="1">
+            <tr>
+                <th>#</th>
+                <th>Title</th>
+                <th>Date</th>
+                <th>Text</th>
+                <th>Done?</th>
+            </tr>
+            {% for todo in todos %}
+                <tr>
+                    <td>{{ todo.id }}</td>
+                    <td>{{ todo.title }}</td>
+                    <td>
+                        {% if todo.pub_date %}
+                            {{ todo.pub_date.strftime('%Y-%m-%d %H:%M') }}
+                        {% else %}
+                            (无数据)
+                        {% endif %}
+                    </td>
+
+                    <td>{{ todo.text }}</td>
+                    <td>
+                        <input type=checkbox name=done.{{ todo.id }}{{ " checked" if todo.done }}>
+                    </td>
+                </tr>
+            {% endfor %}
+
+        </table>
+        <p>
+            <input type=submit value="Update">
+            <a href="{{ url_for('create') }}">create a new item</a>
+    </form>
+{% endblock %}
