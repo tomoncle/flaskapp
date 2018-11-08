@@ -30,6 +30,6 @@ if __name__ == '__main__':
     #     $ python manager.py shell
     commands = sys.argv
     if len(commands) == 2 and 'runserver' == commands[1]:
-        app.start()
+        app.run()
     else:
         manager.run()
