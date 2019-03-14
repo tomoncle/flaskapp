@@ -42,7 +42,7 @@ app.static_folder = config.STATIC_FOLDER
 # 使用消息提示需要指定secret_key
 app.secret_key = '1!@#$%^&*()'
 # 默认情况下session.permanent 是为False的,即浏览器关闭后自动消失
-session.permanent = True
+# session.permanent = True
 
 
 @app.route('/', methods=["GET", "POST"])
