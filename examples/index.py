@@ -12,7 +12,7 @@
 第一个flask程序
 """
 
-from flask import Flask, render_template, request, abort, flash
+from flask import Flask, render_template, request, abort, flash, redirect
 
 import config
 
@@ -75,8 +75,11 @@ def not_fund(e):
     return render_template("404.html", err=e)
 
 
-@app.route('/login', methods=["POST"])
+@app.route('/login', methods=["GET","POST"])
 def login():
+    if request.method == "GET":
+        return render_template("index.html")
+
     form = request.form
     username = form.get('username')
     password = form.get('password')
@@ -87,12 +90,17 @@ def login():
         flash(u"password 不能为空！")
         return render_template("index.html")
     elif username == 'admin' and password == 'admin':
-        flash("login success!")
-        return render_template("index.html")
+        return redirect("/home")
     else:
         flash("username or password is error!")
         return render_template("index.html")
 
 
+@app.route('/home', methods=["GET"])
+def home():
+    flash("login success!")
+    return render_template("home.html")
+
+
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
