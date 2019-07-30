@@ -71,10 +71,11 @@ class DictModel(object):
                         res[filed].append(f.json(lazy=lazy, ignore=_ignore, deep=deep + 1))
             else:
                 try:
-                    if isinstance(filed_type, unicode):
+                    # TODO
+                    if isinstance(filed_type, str):
                         filed_type = filed_type.encode('UTF-8')
                     res[filed] = '{}'.format(filed_type)
-                except (UnicodeEncodeError, Exception), e:
+                except (UnicodeEncodeError, Exception) as e:
                     logger.error('{class_name}.{filed}: {e}'.format(
                         class_name=self.__class__.__name__, filed=filed, e=e))
                     res[filed] = None

@@ -63,7 +63,7 @@ def logout():
 
 @app.before_request
 def interceptor():
-    print "init .server02....interceptor {}".format(session.get("user01", None))
+    print("init .server02....interceptor {}".format(session.get("user01", None)))
     allow_path = ['/login']
     if request.path in allow_path:
         # pass allow paths

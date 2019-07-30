@@ -6,7 +6,7 @@
 # @Product        : PyCharm
 # @Docs           : 
 # @Source         : 
-from base import DictModel
+from .base import DictModel
 from flaskapp import db
 
 

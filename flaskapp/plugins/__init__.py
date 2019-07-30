@@ -7,7 +7,7 @@
 # @Docs           : 
 # @Source         : 
 
-from flask_celery import Celery, make_celery
+from .flask_celery import Celery, make_celery
 
 celery = Celery()
 __all__ = ['celery', 'make_celery']

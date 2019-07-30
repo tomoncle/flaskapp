@@ -4,7 +4,7 @@
 # @Author  : TOM.LEE
 # @File    : user.py
 # @Software: PyCharm
-from base import DictModel
+from .base import DictModel
 from flaskapp import db
 
 

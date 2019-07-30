@@ -36,9 +36,9 @@ def _banner():
     if os.path.exists(banner_path) and os.path.isfile(banner_path):
         with open(banner_path) as f:
             for line in f:
-                print line.rstrip('\n')
+                print(line.rstrip('\n'))
     else:
-        print banner_text
+        print(banner_text)
 
 
 init = _banner

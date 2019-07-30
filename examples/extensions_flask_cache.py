@@ -23,7 +23,7 @@ def _call():
     反之，打印信息
     :return:
     """
-    print 'call database...'
+    print('call database...')
 
 
 @app.route('/')

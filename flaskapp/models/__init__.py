@@ -6,9 +6,9 @@
 # @Product        : PyCharm
 # @Source         :
 
-from clazz import Clazz
-from school import School
-from user import User
+from .clazz import Clazz
+from .school import School
+from .user import User
 from ..common import ConsoleLogger, relative_path
 
 logger = ConsoleLogger(relative_path(__file__))

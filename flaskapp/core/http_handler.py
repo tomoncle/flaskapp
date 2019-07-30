@@ -7,7 +7,7 @@
 # @Docs           : 
 # @Source         : 
 
-from flask import request, redirect
+from flask import request
 
 from flaskapp import app
 from ..common import (view_html, ConsoleLogger, make_response, json_encoder, relative_path)
