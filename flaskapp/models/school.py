@@ -13,7 +13,7 @@ class School(db.Model, DictModel):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), unique=True, nullable=False)
-    address = db.Column(db.String(80), unique=True, nullable=False)
+    address = db.Column(db.String(80), nullable=False)
     # 该属性查询"Clazz"时，
     # db.backref('school', lazy='joined')该属性会级联把School类的信息查询出来，
     # 并赋值给backref的第一个参数即"clazz",关联类(Clazz)会自动添加一个动态属性school
