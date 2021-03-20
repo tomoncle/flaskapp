@@ -29,7 +29,7 @@ Flask-WTF==0.14.2
 idna==2.8
 inflection==0.3.1
 itsdangerous==1.1.0
-Jinja2==2.10.1
+Jinja2==2.11.3
 jsonschema==3.0.1
 kombu==3.0.37
 Mako==1.0.12
