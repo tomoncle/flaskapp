@@ -32,7 +32,7 @@ itsdangerous==1.1.0
 Jinja2==2.11.3
 jsonschema==3.0.1
 kombu==3.0.37
-Mako==1.0.12
+Mako==1.2.2
 MarkupSafe==1.1.1
 mistune==0.8.4
 mysql-connector==2.2.9
