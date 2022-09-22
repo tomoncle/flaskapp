@@ -16,22 +16,25 @@
 * 等等
 
 ## Others
+
 * 数据库更新迁移
+
 ```bash
-$ python manager.py db init
-$ python manager.py db migrate
+$ flask db init
+$ flask db migrate
 ```
 
 * Dockerfile 构建
+
 ```bash
 $ ./docker-build.sh
 ```
-* celery异步处理
 
+* celery异步处理
 * swagger配置
 
-
 ## Authors
+
 * [tomoncle](https://github.com/tomoncle)
 * 源码地址：https://github.com/tomoncle/flaskapp
 

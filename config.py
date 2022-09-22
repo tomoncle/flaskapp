@@ -21,9 +21,9 @@ ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'sql'}
 # ****** MySQL 配置
 SQLALCHEMY_DATABASE_URI = 'mysql+mysqlconnector://{user}:{password}@{host}:{port}/{database}?charset=utf8'.format(
     user=environ.get('DB_USER', 'root'),
-    password=environ.get('DB_PASS', 'root'),
+    password=environ.get('DB_PASS', '123456'),
     host=environ.get('DB_HOST', 'localhost'),
-    port=environ.get('DB_PORT', 33306),
+    port=environ.get('DB_PORT', 3306),
     database=environ.get('DB_NAME', 'db_flask'))
 SQLALCHEMY_TRACK_MODIFICATIONS = True  # 禁止警告
 SQLALCHEMY_ECHO = False  # 是否打印
