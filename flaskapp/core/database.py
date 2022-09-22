@@ -45,6 +45,10 @@ class Transactional(Database):
             raise AssertionError('obj must be <class {}> type.'
                                  .format(self.model.__class__.__name__))
 
+    def __del__(self):
+        self.session.remove()
+        logger.info("调用删除方法： self.session.remove()")
+
 
 class Persistence(Transactional):
     def __init__(self, **kwargs):

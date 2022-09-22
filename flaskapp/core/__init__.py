@@ -4,9 +4,9 @@
 # @Author  : TOM.LEE
 # @File    : __init__.py.py
 # @Software: PyCharm
-import database
-import http_handler
-import http_interceptor
+from . import database
+from . import http_handler
+from . import http_interceptor
 from ..common import ConsoleLogger, relative_path
 
 logger = ConsoleLogger(relative_path(__file__))

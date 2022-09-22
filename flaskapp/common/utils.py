@@ -6,7 +6,7 @@
 # @Product        : PyCharm
 # @Docs           : 
 # @Source         : 
-from tools import parser_properties
+from .tools import parser_properties
 
 
 class ParserProperties(object):

@@ -51,7 +51,7 @@ def make_response(status=HttpStatus.SUCCESS, e=None, data=None):
     :return:   json str data
     """
     assert isinstance(status, int)
-    if status in xrange(200, 300) and not e:
+    if status in range(200, 300) and not e:
         e = 'success'
     if hasattr(e, 'message') and e.message:
         e = e.message

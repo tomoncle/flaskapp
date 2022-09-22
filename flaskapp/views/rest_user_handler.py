@@ -31,12 +31,13 @@ def users():
             return make_response(HttpStatus.SUCCESS, data=user_service.get(user_id))
         return make_response(HttpStatus.SUCCESS, data=user_service.query_all())
 
-    user_name = request.form.get('name')
-    user_email = request.form.get('email')
+    import random
+    user_name = request.form.get('name') + str(random.random())
+    user_email = request.form.get('email') + str(random.random())
     if not all((user_name, user_email)):
         abort(HttpStatus.BAD_REQUEST)
-    data = user_service.save(User(user_name, user_email))
-    return make_response(HttpStatus.SUCCESS, data=data)
+    data = user_service.save(User(username=user_name, email=user_email))
+    return make_response(HttpStatus.SUCCESS, data=data.json())
 
 
 @user.route("/<user_id>", methods=["GET"])

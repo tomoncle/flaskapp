@@ -26,5 +26,5 @@ def async_compute(a, b):
 @json_encoder
 def task():
     result = async_compute.delay(1, 2)
-    print result.wait()
+    print(result.wait())
     return 'task id: {}'.format(result)

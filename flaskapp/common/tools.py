@@ -8,7 +8,10 @@
 
 import os
 from collections import defaultdict
+from functools import reduce
+
 from werkzeug.datastructures import ImmutableMultiDict
+
 from config import (PROJECT_PATH, ALLOWED_EXTENSIONS)
 
 environ = os.environ
@@ -88,4 +91,3 @@ def multi_dict_parser2dict(multi_dict):
     if not isinstance(multi_dict, ImmutableMultiDict):
         raise AssertionError('object type must be ImmutableMultiDict')
     return {k: multi_dict[k] for k in multi_dict}
-

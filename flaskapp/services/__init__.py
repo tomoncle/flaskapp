@@ -7,8 +7,8 @@
 # @Docs           : 
 # @Source         : 
 
-from base import DBService, AbstractDBService
-from statement import UserService, ClazzService
+from .base import DBService, AbstractDBService
+from .statement import UserService, ClazzService
 from ..common import ConsoleLogger, relative_path
 
 logger = ConsoleLogger(relative_path(__file__))

@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <script src="/static/js/app.js"></script>
+{% endblock %}
+{% block content %}
+    消息提示：<p style="color: red">{{ get_flashed_messages()[0] }}</p>
+    <br/>
+    welcome flask index.html
+    <br/>
+    <a href="/logout">退出</a>
+{% endblock %}

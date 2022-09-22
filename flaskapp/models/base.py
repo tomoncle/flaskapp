@@ -45,7 +45,9 @@ class DictModel(object):
                 _filed_obj = getattr(obj, _filed)
                 if isinstance(_filed_obj, BaseQuery):
                     _primary_entity = '%s' % _filed_obj.attr.target_mapper
-                    if _primary_entity.split('|')[1] == base_obj.__class__.__name__:
+                    if '|' in _primary_entity and _primary_entity.split('|')[1] == base_obj.__class__.__name__:
+                        _ignore_filed.append(_filed)
+                    if '->' in _primary_entity and _primary_entity.split('->')[1] == base_obj.__class__.__name__:
                         _ignore_filed.append(_filed)
                 if isinstance(_filed_obj, type(base_obj)):
                     _ignore_filed.append(_filed)
@@ -71,10 +73,13 @@ class DictModel(object):
                         res[filed].append(f.json(lazy=lazy, ignore=_ignore, deep=deep + 1))
             else:
                 try:
-                    if isinstance(filed_type, unicode):
-                        filed_type = filed_type.encode('UTF-8')
+                    # TODO
+                    if isinstance(filed_type, str):
+                        filed_type = filed_type  # .encode('UTF-8')
+                    if isinstance(filed_type, bytes):
+                        filed_type = filed_type.decode('UTF-8')
                     res[filed] = '{}'.format(filed_type)
-                except (UnicodeEncodeError, Exception), e:
+                except (UnicodeEncodeError, Exception) as e:
                     logger.error('{class_name}.{filed}: {e}'.format(
                         class_name=self.__class__.__name__, filed=filed, e=e))
                     res[filed] = None

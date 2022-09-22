@@ -7,7 +7,7 @@
 # @Docs           :
 # @Source         : 
 
-import functions
+from . import functions
 
 setattr(functions.Flask, 'start', functions.start)
 setattr(functions.Config, 'from_properties', functions.from_properties)

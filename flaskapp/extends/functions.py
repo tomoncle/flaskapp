@@ -11,7 +11,7 @@ import time
 
 from flask import Flask, Config
 
-import banner
+from . import banner
 from ..common import LoggerFactory
 
 _x, _y, _t, _delay = Flask, Config, time.time(), 0.05
@@ -48,4 +48,3 @@ def from_properties(self, file_path):
                 value = environ.get(*args)
 
             self[key] = value
-
