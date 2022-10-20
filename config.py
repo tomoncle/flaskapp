@@ -37,8 +37,8 @@ SQLALCHEMY_POOL_RECYCLE = 60 * 60 * 2  # 自动回收连接的秒数。
 SQLALCHEMY_MAX_OVERFLOW = 20  # 控制在连接池达到最大值后可以创建的连接数。
 
 # ****** Celery 配置 celery.app.utils.py
-CELERY_RESULT_BACKEND = 'redis://localhost:6379'
-CELERY_BROKER_URL = 'redis://localhost:6379'
+CELERY_RESULT_BACKEND = 'redis://:123456@localhost:6379'
+CELERY_BROKER_URL = 'redis://:123456@localhost:6379'
 
 # ############################## flask project auto config ######################################
 DOWNLOAD_FOLDER = '/tmp'
