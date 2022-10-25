@@ -2,7 +2,7 @@
 
 [![Build Status](https://api.travis-ci.org/tomoncle/flaskapp.svg?branch=master)][travis]
 
-* Python Version: 3.6
+* Python Version: 3.7
 * 拓展flask支持banner， 支持config.properties配置文件导入
 * 模块化设计，支持数据库迁移
 * 封装sqlalchemy数据库操作
@@ -16,22 +16,26 @@
 * 等等
 
 ## Others
+
 * 数据库更新迁移
+
 ```bash
-$ python manager.py db init
-$ python manager.py db migrate
+$ flask db init
+$ flask db migrate
+$ flask db upgrade
 ```
 
 * Dockerfile 构建
+
 ```bash
 $ ./docker-build.sh
 ```
-* celery异步处理
 
+* celery异步处理
 * swagger配置
 
-
 ## Authors
+
 * [tomoncle](https://github.com/tomoncle)
 * 源码地址：https://github.com/tomoncle/flaskapp
 

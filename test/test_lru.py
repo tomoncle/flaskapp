@@ -15,21 +15,21 @@ from functools32 import lru_cache
 @lru_cache()
 def fib(n):
     x, y = 0, 1
-    for _ in xrange(n):
+    for _ in range(n):
         x, y = x + y, x
     return x
 
 
 def fib2(n):
     x, y = 0, 1
-    for _ in xrange(n):
+    for _ in range(n):
         x, y = x + y, x
     return x
 
 
 start = time.time()
 
-print fib(16)
-print 'cache   time: ', time.time() - start
-print fib2(16)
-print 'uncache time: ', time.time() - start
+print(fib(16))
+print('cache   time: ', time.time() - start)
+print(fib2(16))
+print('uncache time: ', time.time() - start)

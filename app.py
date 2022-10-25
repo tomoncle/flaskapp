@@ -11,7 +11,6 @@
 import sys
 
 from flaskapp import app
-from flaskapp import manager
 
 if __name__ == '__main__':
     # 初始化
@@ -29,7 +28,5 @@ if __name__ == '__main__':
     # shell
     #     $ python manager.py shell
     commands = sys.argv
-    if len(commands) == 2 and 'runserver' == commands[1]:
-        app.start()
-    else:
-        manager.run()
+    app.run()
+
