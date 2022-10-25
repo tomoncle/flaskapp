@@ -10,6 +10,7 @@
 
 from celery import Celery
 from flask import Flask
+from config import CELERY_BROKER_URL, CELERY_RESULT_BACKEND
 
 
 def make_celery(app):
@@ -31,8 +32,8 @@ def make_celery(app):
 
 flask_app = Flask(__name__)
 flask_app.config.update(
-    CELERY_BROKER_URL='redis://:123456@localhost:6379',
-    CELERY_RESULT_BACKEND='redis://:123456@localhost:6379'
+    CELERY_BROKER_URL=CELERY_RESULT_BACKEND,
+    CELERY_RESULT_BACKEND=CELERY_BROKER_URL
 )
 celery = make_celery(flask_app)
 
