@@ -2,7 +2,7 @@
 
 [![Build Status](https://api.travis-ci.org/tomoncle/flaskapp.svg?branch=master)][travis]
 
-* Python Version: 3.7
+* Python Version: >=3.7 (flask-2.2.2 required)
 * 拓展flask支持banner， 支持config.properties配置文件导入
 * 模块化设计，支持数据库迁移
 * 封装sqlalchemy数据库操作

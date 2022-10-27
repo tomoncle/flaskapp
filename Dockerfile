@@ -1,9 +1,9 @@
-FROM docker.pkg.github.com/tomoncle/mirrors/python36:alpine
-MAINTAINER Tom.Lee <1123431949@qq.com>
+FROM tomoncle/python3.10
+MAINTAINER tomoncle <tomoncle@sina.com>
 
 WORKDIR /workspace
 ADD ./ /workspace/flaskapp
-
+RUN apk update
 RUN pip install -r /workspace/flaskapp/requirements.txt
 
 EXPOSE 5000

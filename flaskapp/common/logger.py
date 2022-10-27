@@ -5,7 +5,7 @@
 # @File    : logger.py
 # @Software: PyCharm
 import logging
-
+import sys
 FORMAT_STR = '%(asctime)s %(levelname)s {model} :: %(message)s'
 
 
@@ -21,7 +21,7 @@ class ConsoleLogger(object):
         __format = '%(asctime)s %(levelname)s {model} :: %(message)s'.format(model=name)
         __logger = logging.getLogger(name)
         __logger.setLevel(logging.DEBUG)
-        handler = logging.StreamHandler()
+        handler = logging.StreamHandler(sys.stdout)
         formatter = logging.Formatter(__format)
         handler.setFormatter(formatter)
         __logger.addHandler(handler)
@@ -34,7 +34,7 @@ class LoggerFactory(object):
         __format = '%(asctime)s %(levelname)s {model} :: %(message)s'.format(model=name)
         __logger = logging.getLogger(name)
         __logger.setLevel(logging.DEBUG)
-        handler = logging.StreamHandler()
+        handler = logging.StreamHandler(sys.stdout)
         formatter = logging.Formatter(__format)
         handler.setFormatter(formatter)
         __logger.addHandler(handler)

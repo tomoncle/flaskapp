@@ -19,21 +19,22 @@ class TestSchool(object):
         # self.delete()
 
     def create(self):
-        print 'create-' * 10
-        print requests.post(
+        print('create-', "*" * 10)
+        print(requests.post(
             url=self.url,
             data={'name': '山东政法大学', 'address': 'ShanDong　Jinan'}
-        ).text
+        ).text)
 
     def update(self):
-        print 'update-' * 10
-        print requests.put(
+        print('update-', "*" * 10)
+        print(requests.put(
             url=self.url,
             data={'id': 10, 'name': '上海财经大学', 'address': 'ShangHai PuXi'}
-        ).text
+        ).text)
 
     def delete(self):
-        print 'delete-'*10
-        print requests.delete(self.url+'9').text
+        print('delete-', "*" * 10)
+        print(requests.delete(self.url + '9').text)
+
 
 TestSchool()

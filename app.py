@@ -2,31 +2,10 @@
 # -*- coding: utf-8 -*-
 # @Time           : 18-7-10 上午10:22
 # @Author         : Tom.Lee
-# @File           : manager.py
+# @File           : app.py
 # @Product        : PyCharm
-# @Docs           : 
-# @Source         : 
-
-
-import sys
+# @Docs           : https://flask-migrate.readthedocs.io/en/latest/
 
 from flaskapp import app
 
-if __name__ == '__main__':
-    # 初始化
-    #     $ python manager.py db init
-    # 创建/更新表
-    #     $ python manager.py db migrate
-    # 升级/迁移
-    #     $ python manager.py db upgrade
-    # 降级
-    #     $ python manager.py db downgrade
-    # 其他
-    #     $ python manager.py db --help
-    # runserver
-    #     $ python manager.py runserver
-    # shell
-    #     $ python manager.py shell
-    commands = sys.argv
-    app.run()
-
+_ = app

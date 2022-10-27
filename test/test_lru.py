@@ -9,8 +9,10 @@
 
 import time
 
-from functools32 import lru_cache
-
+try:
+    from functools32 import lru_cache
+except ImportError:
+    from functools import lru_cache
 
 @lru_cache()
 def fib(n):

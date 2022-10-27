@@ -8,5 +8,5 @@
 from flaskapp import app
 
 if __name__ == "__main__":
-    app.run()
+    app.start()
     # app.start(port=5258, debug=False)
